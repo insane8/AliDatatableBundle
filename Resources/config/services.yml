@@ -5,7 +5,7 @@ services:
     datatable:
         class: "%datatable.class%"
         arguments: ['@service_container']
-        scope: prototype
+        shared: false
         calls:
             - [setEntityManager, ['@doctrine.orm.entity_manager']]
             
