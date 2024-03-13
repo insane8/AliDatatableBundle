@@ -131,12 +131,13 @@ class DoctrineBuilder implements QueryInterface
      */
     public function addJoin($join_field, $alias, $type = Join::INNER_JOIN, $cond = '')
     {
+        $conditionType = null;
         if ($cond != '')
         {
-            $cond = " with {$cond} ";
+            $conditionType = "WITH";
         }
         $join_method   = $type == Join::INNER_JOIN ? "innerJoin" : "leftJoin";
-        $this->queryBuilder->$join_method($join_field, $alias, null, $cond);
+        $this->queryBuilder->$join_method($join_field, $alias, $conditionType, $cond);
         $this->joins[] = array($join_field, $alias, $type, $cond);
         return $this;
     }
