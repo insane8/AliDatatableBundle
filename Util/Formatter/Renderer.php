@@ -84,7 +84,7 @@ class Renderer
                 }
                 else
                 {
-                    $view = 'AliDatatableBundle:Renderers:_default.html.twig';
+                    $view = '@AliDatatableBundle/Renderers/_default.html.twig';
                 }
                 $params                          = array_merge($params, array(
                     'dt_obj'  => $objects[$row_index],

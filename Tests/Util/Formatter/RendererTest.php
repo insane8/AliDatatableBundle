@@ -30,7 +30,7 @@ class RendererTest extends BaseTestCase
             "_identifier_" => 'p.id')
         ;
         $r      = new Renderer($this->_container, array(), $fields);
-        $out    = $r->applyView('AliDatatableBundle:Renderers:_default.html.twig', $fields);
+        $out    = $r->applyView('@AliDatatableBundle/Renderers/_default.html.twig', $fields);
         $this->assertInternalType('string', $out);
     }
 
@@ -42,7 +42,7 @@ class RendererTest extends BaseTestCase
         ;
         $r      = new Renderer($this->_container, array(
             1 => array(
-                'view'   => 'AliDatatableBundle:Renderers:_actions.html.twig',
+                'view'   => '@AliDatatableBundle/Renderers/_actions.html.twig',
                 'params' => array(
                     'edit_route'            => 'alidatatable_test_edit',
                     'delete_route'          => 'alidatatable_test_delete',

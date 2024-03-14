@@ -464,7 +464,7 @@ class Datatable
      *      ->setRenderers(
      *          array(
      *             2 => array(
-     *               'view' => 'AliDatatableBundle:Renderers:_actions.html.twig',
+     *               'view' => '@AliDatatableBundle/Renderers/_actions.html.twig',
      *               'params' => array(
      *                  'edit_route'    => 'matche_edit',
      *                  'delete_route'  => 'matche_delete',
