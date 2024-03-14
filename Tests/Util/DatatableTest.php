@@ -453,7 +453,7 @@ class DatatableTest extends BaseTestCase
                 ->setRenderers(
                         array(
                             1 => array(
-                                'view'   => '@AliDatatableBundle/Renderers/_actions.html.twig',
+                                'view'   => '@AliDatatable/Renderers/_actions.html.twig',
                                 'params' => array(
                                     'edit_route'            => 'alidatatable_test_edit',
                                     'delete_route'          => 'alidatatable_test_delete',
@@ -487,7 +487,7 @@ class DatatableTest extends BaseTestCase
                         {
                             $data[$key] = $templating
                                     ->render(
-                                    '@AliDatatableBundle/Renderers/_actions.html.twig', array(
+                                    '@AliDatatable/Renderers/_actions.html.twig', array(
                                 'edit_route'            => 'alidatatable_test_edit',
                                 'delete_route'          => 'alidatatable_test_delete',
                                 'delete_form_prototype' => $datatable->getPrototype('delete_form')

@@ -54,7 +54,7 @@ class AliDatatableExtension extends \Twig_Extension
     {
         $translator = $this->_container->get('translator');
         $callback   = function($id) {
-            $path = $this->_container->get('kernel')->locateResource('@AliDatatableBundle/Resources/translations/messages.en.yml');
+            $path = $this->_container->get('kernel')->locateResource('@AliDatatable/Resources/translations/messages.en.yml');
             return \Symfony\Component\Yaml\Yaml::parse(file_get_contents($path))['ali']['common'][explode('.', $id)[2]];
         };
         return $translator->trans($id) === $id ? $callback($id) : $translator->trans($id);
@@ -85,7 +85,7 @@ class AliDatatableExtension extends \Twig_Extension
         $options['multiple']      = $dt->getMultiple();
         $options['sort']          = is_null($dt->getOrderField()) ? NULL : array(array_search(
                     $dt->getOrderField(), array_values($dt->getFields())), $dt->getOrderType());
-        $main_template            = '@AliDatatableBundle/Main/index.html.twig';
+        $main_template            = '@AliDatatable/Main/index.html.twig';
         if (isset($options['main_template']))
         {
             $main_template = $options['main_template'];
