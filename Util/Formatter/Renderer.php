@@ -45,7 +45,7 @@ class Renderer
     public function applyView($view_path, array $params)
     {
         $out = $this->_container
-                ->get('templating')
+                ->get('twig')
                 ->render($view_path, $params);
         return html_entity_decode($out);
     }

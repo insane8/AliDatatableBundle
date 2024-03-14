@@ -427,7 +427,7 @@ class Datatable
      *                       if ($key == 1)
      *                       {
      *                           $data[$key] = $controller_instance
-     *                               ->get('templating')
+     *                               ->get('twig')
      *                               ->render('AliBaseBundle:Entity:_decorator.html.twig',
      *                                       array(
      *                                           'data' => $value

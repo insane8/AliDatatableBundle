@@ -419,7 +419,7 @@ private function _datatable()
                             if ($key == 1)                                      // 1 => address field
                             {
                                 $data[$key] = $controller_instance
-                                        ->get('templating')
+                                        ->get('twig')
                                         ->render(
                                                'XXXMyBundle:Module:_grid_entity.html.twig', 
                                                array('data' => $value)

@@ -471,7 +471,7 @@ class DatatableTest extends BaseTestCase
     public function testSetRenderer()
     {
         $datatable  = $this->_datatable;
-        $templating = $this->_container->get('templating');
+        $templating = $this->_container->get('twig');
         $out        = $datatable
                 ->setEntity('Ali\DatatableBundle\Tests\TestBundle\Entity\Feature', 'f')
                 ->setFields(
