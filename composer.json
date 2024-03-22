@@ -14,8 +14,8 @@
     ],
     "require": {
         "php": "^7.0",
-        "twig/twig": "^1.0|^2.0",
-        "doctrine/orm": "^2.0",
+        "twig/twig": "^2.0|^3.0",
+        "doctrine/orm": "^2.0|^3.0",
         "doctrine/doctrine-bundle": "^1.0|^2.0"
     },
     "target-dir": "Ali/DatatableBundle",
