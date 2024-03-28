@@ -8,6 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Ali\DatatableBundle\Util\Datatable;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
+use Twig\TwigFunction;
 
 class AliDatatableExtension extends AbstractExtension
 {
@@ -31,7 +32,7 @@ class AliDatatableExtension extends AbstractExtension
     public function getFunctions()
     {
         return array(
-            new TwigFilter('datatable', array($this, 'datatable'), array("is_safe" => array("html")))
+            new TwigFunction('datatable', array($this, 'datatable'), array("is_safe" => array("html")))
         );
     }
 
